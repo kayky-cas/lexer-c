@@ -2,11 +2,11 @@ CFLAGS = -Wall -O2
 
 PROG = main
 SOURCES = main.c
-OBJECTS = $(SOURCES:.c=.o)
 
 $(PROG): $(OBJECTS)
 	mkdir -p out
-	gcc $(CFLAGS) $(OBJECTS) -o ./out/$@
+	gcc $(CFLAGS) $(SOURCES) -o ./out/$@
+	./out/$@
 
 clear:
 	-@ rm -f ./out/*
