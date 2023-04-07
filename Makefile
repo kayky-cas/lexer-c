@@ -5,7 +5,8 @@ SOURCES = main.c
 OBJECTS = $(SOURCES:.c=.o)
 
 $(PROG): $(OBJECTS)
-	gcc $(CFLAGS) $(OBJECTS) -o $@
+	mkdir -p out
+	gcc $(CFLAGS) $(OBJECTS) -o ./out/$@
 
 clear:
-	-@ rm -f $(OBJECTS) $(PROG)
+	-@ rm -f ./out/*
